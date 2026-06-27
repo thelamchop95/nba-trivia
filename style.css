@@ -93,26 +93,44 @@ body.dark .jersey-numbers { color: rgba(255,255,255,0.05); }
 
 .player-silhouette {
   position: absolute;
-  bottom: -2%;
-  width: 260px;
-  height: 420px;
-  background-color: rgba(0,0,0,0.28);
+  background-color: rgba(0,0,0,0.3);
   -webkit-mask-image: var(--mask);
   mask-image: var(--mask);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-size: contain;
   mask-size: contain;
-  opacity: 0.5;
+  opacity: 0.55;
 }
-.silhouette-1 {
-  left: -2%;
-  --mask: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 320'%3E%3Cellipse cx='115' cy='34' rx='20' ry='22'/%3E%3Crect x='95' y='55' width='40' height='80' rx='16'/%3E%3Crect x='60' y='65' width='30' height='95' rx='14' transform='rotate(-18 75 110)'/%3E%3Crect x='128' y='40' width='28' height='110' rx='14' transform='rotate(35 142 95)'/%3E%3Crect x='90' y='128' width='22' height='110' rx='10'/%3E%3Crect x='112' y='128' width='22' height='130' rx='10' transform='rotate(8 123 190)'/%3E%3Ccircle cx='150' cy='30' r='14'/%3E%3C/svg%3E");
+
+/* Soaring one-handed dunk: knee tucked, off arm cocked back, ball arm fully extended overhead */
+.silhouette-dunk {
+  left: -3%;
+  bottom: 4%;
+  width: 280px;
+  height: 440px;
+  --mask: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 360'%3E%3Ccircle cx='150' cy='28' r='17'/%3E%3Crect x='128' y='44' width='36' height='70' rx='16' transform='rotate(-8 146 79)'/%3E%3Crect x='150' y='12' width='24' height='95' rx='12' transform='rotate(-58 162 60)'/%3E%3Ccircle cx='196' cy='6' r='13'/%3E%3Crect x='95' y='38' width='24' height='80' rx='12' transform='rotate(45 107 78)'/%3E%3Crect x='108' y='108' width='26' height='70' rx='13' transform='rotate(18 121 143)'/%3E%3Crect x='118' y='160' width='24' height='55' rx='12' transform='rotate(60 130 187)'/%3E%3Crect x='62' y='150' width='26' height='90' rx='13' transform='rotate(-32 75 195)'/%3E%3Crect x='40' y='225' width='22' height='60' rx='11' transform='rotate(-50 51 255)'/%3E%3C/svg%3E");
 }
-.silhouette-2 {
-  right: -2%;
-  --mask: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 320'%3E%3Cellipse cx='90' cy='30' rx='20' ry='22'/%3E%3Crect x='72' y='50' width='40' height='85' rx='16'/%3E%3Crect x='40' y='55' width='28' height='100' rx='14' transform='rotate(-30 54 100)'/%3E%3Crect x='105' y='55' width='28' height='100' rx='14' transform='rotate(28 119 100)'/%3E%3Crect x='68' y='128' width='22' height='130' rx='10' transform='rotate(-6 79 190)'/%3E%3Crect x='92' y='128' width='22' height='115' rx='10'/%3E%3C/svg%3E");
+
+/* No-look behind-the-back pass: wide stance, head and shoulders turned away from the extended passing arm */
+.silhouette-pass {
+  right: -3%;
+  bottom: 0%;
+  width: 300px;
+  height: 400px;
+  --mask: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 320'%3E%3Ccircle cx='150' cy='34' r='17'/%3E%3Crect x='128' y='52' width='40' height='78' rx='17' transform='rotate(6 148 91)'/%3E%3Crect x='168' y='58' width='22' height='90' rx='11' transform='rotate(70 179 103)'/%3E%3Ccircle cx='245' cy='128' r='12'/%3E%3Crect x='98' y='55' width='22' height='75' rx='11' transform='rotate(-25 109 92)'/%3E%3Crect x='118' y='126' width='26' height='70' rx='13' transform='rotate(-12 131 161)'/%3E%3Crect x='95' y='178' width='24' height='80' rx='12' transform='rotate(-25 107 218)'/%3E%3Crect x='150' y='126' width='26' height='75' rx='13' transform='rotate(20 163 163)'/%3E%3Crect x='168' y='185' width='24' height='80' rx='12' transform='rotate(28 180 225)'/%3E%3C/svg%3E");
   transform: scaleX(-1);
+}
+
+/* Set-shot follow-through: legs together, guide hand drops away, shooting wrist snapped at full extension */
+.silhouette-jumpshot {
+  left: 50%;
+  top: 2%;
+  width: 200px;
+  height: 320px;
+  opacity: 0.16;
+  transform: translateX(-50%);
+  --mask: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 300'%3E%3Ccircle cx='98' cy='26' r='15'/%3E%3Crect x='82' y='40' width='32' height='70' rx='15' transform='rotate(-4 98 75)'/%3E%3Crect x='90' y='4' width='20' height='80' rx='10' transform='rotate(2 100 44)'/%3E%3Cpath d='M88 2 q10 -10 20 0 l-4 14 q-6 6 -12 0 z'/%3E%3Crect x='58' y='46' width='20' height='60' rx='10' transform='rotate(-35 68 76)'/%3E%3Crect x='84' y='104' width='18' height='85' rx='9'/%3E%3Crect x='62' y='104' width='18' height='85' rx='9'/%3E%3C/svg%3E");
 }
 
 .wrap {
